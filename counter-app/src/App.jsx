@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Simple Counter App</h1>
+      <h1>Simplest Counter App</h1>
       <div className="counter-container">
         <h2 className="counter-display">{count}</h2>
         <button 
