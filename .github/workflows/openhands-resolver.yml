@@ -24,7 +24,7 @@ jobs:
       macro: ${{ vars.OPENHANDS_MACRO || '@openhands-agent' }}
       max_iterations: ${{ fromJson(vars.OPENHANDS_MAX_ITER || 50) }}
       base_container_image: ${{ vars.OPENHANDS_BASE_CONTAINER_IMAGE || '' }}
-      LLM_MODEL: ${{ vars.LLM_MODEL || 'openrouter/moonshotai/kimi-dev-72b:free'}}
+      LLM_MODEL: ${{ 'openrouter/deepseek/deepseek-r1-0528:free' || vars.LLM_MODEL}}
       target_branch: ${{ vars.TARGET_BRANCH || 'main' }}
       runner: ${{ vars.TARGET_RUNNER }}
     secrets:
@@ -32,4 +32,4 @@ jobs:
       PAT_USERNAME: ${{ secrets.PAT_USERNAME }}
       LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
       LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
-      LLM_MODEL: ${{ vars.LLM_MODEL }}
+      LLM_MODEL: ${{ 'deepseek/deepseek-r1-0528:free' }}
